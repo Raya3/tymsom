@@ -101,3 +101,57 @@ button:hover {
   gap: 8px; /* Reduced gap for compact layout */
   align-items: center;
 }
+
+/* Modern Arrow Buttons */
+.adjust-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adjust-btn:hover {
+  background-color: var(--primary);
+  transform: scale(1.1);
+}
+
+.adjust-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pure CSS Triangles */
+.adjust-btn::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.plus::before {
+  border-bottom: 10px solid var(--text);
+  margin-bottom: 2px;
+}
+
+.minus::before {
+  border-top: 10px solid var(--text);
+  margin-top: 2px;
+}
+
+/* Compact Input Group Layout */
+.time-input {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.time-input input {
+  flex: 1;
+  text-align: center;
+}

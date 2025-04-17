@@ -12,24 +12,36 @@
     <div id="inputs">
         <!-- Box 1 (30 min) -->
         <div class="time-input">
-            <button class="adjust-btn minus">-15m</button>
+            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
+            <span class="arrow-down"></span>
+            </button>
             <input type="text" class="time" placeholder="HH:MM" value="00:30">
-            <button class="adjust-btn plus">+15m</button>
+            <button class="adjust-btn plus" aria-label="Add 15 minutes">
+            <span class="arrow-up"></span>
+            </button>
             <button class="remove-btn">✕</button>
         </div>
         <!-- Box 2 (45 min) -->
         <div class="time-input">
-            <button class="adjust-btn minus">-15m</button>
+            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
+            <span class="arrow-down"></span>
+            </button>
             <input type="text" class="time" placeholder="HH:MM" value="00:45">
-            <button class="adjust-btn plus">+15m</button>
-            <button class="remove-btn">Remove</button>
+            <button class="adjust-btn plus" aria-label="Add 15 minutes">
+            <span class="arrow-up"></span>
+            </button>
+            <button class="remove-btn">✕</button>
         </div>
         <!-- Box 3 (empty) -->
         <div class="time-input">
-            <button class="adjust-btn minus">-15m</button>
+            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
+            <span class="arrow-down"></span>
+            </button>
             <input type="text" class="time" placeholder="HH:MM" value="00:00">
-            <button class="adjust-btn plus">+15m</button>
-            <button class="remove-btn">Remove</button>
+            <button class="adjust-btn plus" aria-label="Add 15 minutes">
+            <span class="arrow-up"></span>
+            </button>
+            <button class="remove-btn">✕</button>
         </div>
     </div>
     <button id="add-btn">Add Another Time</button>
