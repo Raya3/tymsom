@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const newInput = document.createElement('div');
         newInput.className = 'time-input';
         newInput.innerHTML = `
+            <button class="adjust-btn minus">-15m</button>
             <input type="text" class="time" placeholder="HH:MM" value="00:00">
-            <button class="remove-btn">Remove</button>
+            <button class="adjust-btn plus">+15m</button>
+            <button class="remove-btn">✕</button>
         `;
         inputsContainer.appendChild(newInput);
 
@@ -53,5 +55,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 inputsContainer.removeChild(this.parentElement);
             }
         });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('adjust-btn')) {
+        const input = e.target.closest('.time-input').querySelector('.time');
+        let [hours, minutes] = input.value.split(':').map(Number);
+        let totalMinutes = hours * 60 + minutes;
+    
+        // Adjust time
+        totalMinutes += e.target.classList.contains('plus') ? 15 : -15;
+        
+        // Handle negative time (optional: set to 0 instead)
+        if (totalMinutes < 0) totalMinutes = 0;
+    
+        // Convert back to HH:MM
+        hours = Math.floor(totalMinutes / 60);
+        minutes = totalMinutes % 60;
+        input.value = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+        }
     });
 });

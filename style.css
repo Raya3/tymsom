@@ -82,3 +82,22 @@ button:hover {
     border-radius: 8px;
     margin-top: 1rem;
 }
+.adjust-btn {
+  padding: 0.6rem;
+  background-color: var(--secondary);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.adjust-btn:hover {
+  background-color: var(--primary);
+}
+
+.time-input {
+  display: flex;
+  gap: 8px; /* Reduced gap for compact layout */
+  align-items: center;
+}
