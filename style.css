@@ -1,13 +1,16 @@
 :root {
-    --primary: #84DCC6;
-    --secondary: #A5FFD6;
-    --accent1: #FFA69E;
-    --accent2: #FF686B;
-    --text: #333333;
-    --bg: #FFFFFF;
-}
-
-body {
+    /* Modern Professional Color Palette */
+    --bg: #F8F9FA;           /* Light gray background */
+    --card: #FFFFFF;         /* White for cards/inputs */
+    --text: #1A1A1A;         /* Near-black for text */
+    --border: #E0E0E0;       /* Subtle border color */
+    --primary: #2563EB;      /* Vibrant blue (main accent) */
+    --primary-light: #EFF6FF;/* Light blue (backgrounds) */
+    --error: #EF4444;        /* Red for remove actions */
+  }
+  
+  /* Base Styles */
+  body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: var(--text);
@@ -15,63 +18,95 @@ body {
     margin: 0 auto;
     padding: 2rem;
     line-height: 1.6;
-}
-
-h1 {
+  }
+  
+  h1 {
     color: var(--primary);
     text-align: center;
     margin-bottom: 1.5rem;
-}
-
-.time-input {
+    font-weight: 600;
+  }
+  
+  /* Time Input Group */
+  .time-input {
     display: flex;
     gap: 8px;
     margin-bottom: 1rem;
     align-items: center;
-}
-
-.time-input input {
+  }
+  
+  .time-input input {
     flex: 1;
     padding: 0.8rem;
-    border: 2px solid var(--secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 8px;
     font-size: 1rem;
     text-align: center;
-}
-
-.adjust-btn {
+    transition: border 0.3s;
+  }
+  
+  .time-input input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  /* Arrow Buttons */
+  .adjust-btn {
     width: 36px;
     height: 36px;
     padding: 0;
-    background-color: var(--secondary);
-    color: var(--text);
+    background-color: var(--primary);
+    color: white;
     border: none;
     border-radius: 50%;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.2s;
-}
-
-.adjust-btn:hover {
-    background-color: var(--primary);
-    transform: scale(1.1);
-}
-
-.remove-btn {
-    background-color: var(--accent1);
+    display: grid;
+    place-items: center;
+  }
+  
+  .adjust-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  
+  .adjust-btn::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+  
+  .plus::before {
+    border-bottom: 10px solid white;
+    margin-bottom: 2px;
+  }
+  
+  .minus::before {
+    border-top: 10px solid white;
+    margin-top: 2px;
+  }
+  
+  /* Remove Button */
+  .remove-btn {
+    background-color: var(--error);
     color: white;
     border: none;
     border-radius: 8px;
     padding: 0.8rem 1rem;
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.remove-btn:hover {
-    background-color: var(--accent2);
-}
-
-#add-btn {
+  }
+  
+  .remove-btn:hover {
+    background-color: #DC2626; /* Slightly darker red */
+  }
+  
+  /* Add Button */
+  #add-btn {
     background-color: var(--primary);
     color: white;
     width: 100%;
@@ -81,14 +116,26 @@ h1 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-}
-
-#result {
+    transition: opacity 0.3s;
+  }
+  
+  #add-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Result Display */
+  #result {
     font-size: 1.4rem;
     text-align: center;
     padding: 1rem;
-    background-color: var(--secondary);
+    background-color: var(--primary-light);
+    color: var(--primary);
     border-radius: 12px;
     margin-top: 1.5rem;
     font-weight: 600;
-}
+  }
+  
+  /* Optional: Subtle shadow for depth */
+  .time-input, #result, #add-btn {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
