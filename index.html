@@ -3,50 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Duration Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tymsom - Time Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Time Duration Calculator</h1>
+    <h1>Tymsom</h1>
     <div id="inputs">
         <!-- Box 1 (30 min) -->
         <div class="time-input">
-            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
-            <span class="arrow-down"></span>
-            </button>
+            <button class="adjust-btn minus">▼</button>
             <input type="text" class="time" placeholder="HH:MM" value="00:30">
-            <button class="adjust-btn plus" aria-label="Add 15 minutes">
-            <span class="arrow-up"></span>
-            </button>
+            <button class="adjust-btn plus">▲</button>
             <button class="remove-btn">✕</button>
         </div>
         <!-- Box 2 (45 min) -->
         <div class="time-input">
-            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
-            <span class="arrow-down"></span>
-            </button>
+            <button class="adjust-btn minus">▼</button>
             <input type="text" class="time" placeholder="HH:MM" value="00:45">
-            <button class="adjust-btn plus" aria-label="Add 15 minutes">
-            <span class="arrow-up"></span>
-            </button>
+            <button class="adjust-btn plus">▲</button>
             <button class="remove-btn">✕</button>
         </div>
         <!-- Box 3 (empty) -->
         <div class="time-input">
-            <button class="adjust-btn minus" aria-label="Subtract 15 minutes">
-            <span class="arrow-down"></span>
-            </button>
+            <button class="adjust-btn minus">▼</button>
             <input type="text" class="time" placeholder="HH:MM" value="00:00">
-            <button class="adjust-btn plus" aria-label="Add 15 minutes">
-            <span class="arrow-up"></span>
-            </button>
+            <button class="adjust-btn plus">▲</button>
             <button class="remove-btn">✕</button>
         </div>
     </div>
-    <button id="add-btn">Add Another Time</button>
-    <button id="calculate-btn">Calculate Total</button>
-    <div id="result">Total: 00:00</div>
+    <button id="add-btn">Add Time</button>
+    <div id="result">Total: 01:15</div>
 
     <script src="script.js"></script>
 </body>
