@@ -1,141 +1,137 @@
 :root {
-    /* Modern Professional Color Palette */
-    --bg: #F8F9FA;           /* Light gray background */
-    --card: #FFFFFF;         /* White for cards/inputs */
-    --text: #1A1A1A;         /* Near-black for text */
-    --border: #E0E0E0;       /* Subtle border color */
-    --primary: #2563EB;      /* Vibrant blue (main accent) */
-    --primary-light: #EFF6FF;/* Light blue (backgrounds) */
-    --error: #EF4444;        /* Red for remove actions */
-  }
-  
-  /* Base Styles */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    line-height: 1.6;
-  }
-  
-  h1 {
-    color: var(--primary);
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-  }
-  
-  /* Time Input Group */
-  .time-input {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 1rem;
-    align-items: center;
-  }
-  
-  .time-input input {
-    flex: 1;
-    padding: 0.8rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 1rem;
-    text-align: center;
-    transition: border 0.3s;
-  }
-  
-  .time-input input:focus {
-    outline: none;
-    border-color: var(--primary);
-  }
-  
-  /* Arrow Buttons */
-  .adjust-btn {
-    width: 36px;
-    height: 36px;
-    padding: 0;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: grid;
-    place-items: center;
-  }
-  
-  .adjust-btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-  }
-  
-  .adjust-btn::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-  }
-  
-  .plus::before {
-    border-bottom: 10px solid white;
-    margin-bottom: 2px;
-  }
-  
-  .minus::before {
-    border-top: 10px solid white;
-    margin-top: 2px;
-  }
-  
-  /* Remove Button */
-  .remove-btn {
-    background-color: var(--error);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .remove-btn:hover {
-    background-color: #DC2626; /* Slightly darker red */
-  }
-  
-  /* Add Button */
-  #add-btn {
-    background-color: var(--primary);
-    color: white;
-    width: 100%;
-    margin: 1rem 0;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  }
-  
-  #add-btn:hover {
-    opacity: 0.9;
-  }
-  
-  /* Result Display */
-  #result {
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--primary-light);
-    color: var(--primary);
-    border-radius: 12px;
-    margin-top: 1.5rem;
-    font-weight: 600;
-  }
-  
-  /* Optional: Subtle shadow for depth */
-  .time-input, #result, #add-btn {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
+  /* Your Custom Blue Theme */
+  --primary: #064789;       /* Deep navy (main accent) */
+  --secondary: #427AA1;     /* Soft blue (secondary) */
+  --bg: #EBF2FA;           /* Light sky blue (background) */
+  --card: #FFFFFF;         /* White (inputs/cards) */
+  --text: #1A1A1A;         /* Near-black (text) */
+  --border: #D1E0F0;       /* Light blue border */
+  --error: #EF476F;        /* Coral red (remove actions) */
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Time Input Group */
+.time-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.time-input input {
+  flex: 1;
+  padding: 0.8rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  transition: border 0.3s;
+}
+
+.time-input input:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+/* Arrow Buttons */
+.adjust-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 30%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: grid;
+  place-items: center;
+}
+
+.adjust-btn:hover {
+  background-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.adjust-btn::before {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.plus::before {
+  border-bottom: 10px solid white;
+  margin-bottom: 2px;
+}
+
+.minus::before {
+  border-top: 10px solid white;
+  margin-top: 2px;
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: var(--error);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #D93757; /* Darker coral */
+}
+
+/* Add Button */
+#add-btn {
+  background-color: var(--primary);
+  color: white;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#add-btn:hover {
+  opacity: 0.9;
+}
+
+/* Result Display */
+#result {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--card);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
